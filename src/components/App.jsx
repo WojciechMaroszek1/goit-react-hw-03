@@ -28,7 +28,7 @@ function App() {
 		setContacts(prevContact => prevContact.filter(contact => contact.id !== id));
 	};
 
-	const handleFilterChange = evt => {
+	const handleFilter = evt => {
 		setFilter(evt.target.value);
 	};
 
@@ -42,7 +42,7 @@ function App() {
 		<div className={css.webstyle}>
 			<h1>Phonebook</h1>
 			<ContactForm addContacts={addContacts} />
-			<SearchBox handleFilterChange={handleFilterChange} value={filter} />
+			<SearchBox handleFilterChange={handleFilter} value={filter} />
 			<ContactList contacts={filtredContacts} deleteContacts={deleteContacts} />
 		</div>
 	);
