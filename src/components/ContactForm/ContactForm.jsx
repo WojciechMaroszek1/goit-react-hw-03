@@ -29,12 +29,12 @@ const ContactForm = ({ addContacts }) => {
 				<div className={css.field_box}>
 					<label htmlFor={nameId}>Name</label>
 					<Field className={css.form_field} type="text" name="name" id={nameId}></Field>
-					<ErrorMessage name="name" component="div" as="span" />
+					<ErrorMessage className={css.error} name="name" component="div" as="span" />
 				</div>
 				<div className={css.field_box}>
 					<label htmlFor={numberId}>Number</label>
 					<Field className={css.form_field} type="text" name="number" id={numberId}></Field>
-					<ErrorMessage name="number" component="div" as="span" />
+					<ErrorMessage className={css.error} name="number" component="div" as="span" />
 				</div>
 				<button type="submit" className={css.button}>
 					Add contact
